@@ -16,5 +16,11 @@ class TestCalc:
         with pytest.raises(ZeroDivisionError):
             self.calc.division(self, 1, 0)
 
+    def test_multiplication(self):
+        assert self.calc.multiply(self, 9, 7) == 63
+
+    def test_subtraction(self):
+        assert self.calc.subtraction(self, 2, 3) == -1
+
     def teardown(self):
         print('Выполнение метода Teardown')
